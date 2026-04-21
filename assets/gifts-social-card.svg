@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">GIFTS social card</title>
+  <desc id="desc">Branded social preview image for the GIFTS site.</desc>
+  <defs>
+    <linearGradient id="page" x1="92" y1="54" x2="1118" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7f2e9"/>
+      <stop offset="0.48" stop-color="#efe5d4"/>
+      <stop offset="1" stop-color="#e4ece9"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="132" y1="92" x2="1024" y2="534" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffaf2"/>
+      <stop offset="1" stop-color="#f8f0e5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="160" y1="110" x2="480" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b15c39"/>
+      <stop offset="0.5" stop-color="#8d4627"/>
+      <stop offset="1" stop-color="#2f6b70"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="220" y1="210" x2="524" y2="408" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7efe2"/>
+      <stop offset="1" stop-color="#f1d8a0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#112228" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#page)"/>
+  <circle cx="1040" cy="112" r="144" fill="#2f6b70" fill-opacity="0.09"/>
+  <circle cx="140" cy="574" r="176" fill="#b15c39" fill-opacity="0.08"/>
+  <circle cx="1126" cy="548" r="124" fill="#b89447" fill-opacity="0.09"/>
+
+  <rect x="92" y="68" width="1016" height="494" rx="42" fill="url(#panel)" filter="url(#shadow)"/>
+  <rect x="132" y="108" width="338" height="414" rx="34" fill="url(#accent)"/>
+
+  <circle cx="396" cy="182" r="52" fill="#fff8ef" fill-opacity="0.11"/>
+  <circle cx="206" cy="446" r="74" fill="#fff8ef" fill-opacity="0.08"/>
+  <path d="M178 316c28-67 96-103 176-96 23 2 48 8 70 18" fill="none" stroke="url(#stroke)" stroke-linecap="round" stroke-width="14"/>
+  <path d="M418 258c-24 69-89 112-167 114-26 1-51-3-76-12" fill="none" stroke="#fff7eb" stroke-linecap="round" stroke-width="12" stroke-opacity="0.76"/>
+  <text x="176" y="252" fill="#fffaf1" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="128" font-weight="700" letter-spacing="8">GI</text>
+  <rect x="172" y="280" width="146" height="15" rx="7.5" fill="#f1d8a0"/>
+  <text x="176" y="418" fill="#fff3e4" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="34" letter-spacing="4">GIFTS</text>
+  <text x="176" y="458" fill="#fff7eb" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="22" letter-spacing="2">GENERATIVE IDENTITY</text>
+  <text x="176" y="488" fill="#fff7eb" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="22" letter-spacing="2">FORENSICS AND TRUST SYSTEM</text>
+
+  <text x="530" y="186" fill="#2f6b70" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="20" font-weight="700" letter-spacing="5">PUBLIC TECHNICAL OVERVIEW</text>
+  <text x="530" y="272" fill="#162129" font-family="'Iowan Old Style', 'Palatino Linotype', serif" font-size="60" font-weight="600">
+    <tspan x="530" dy="0">Portable identity assurance</tspan>
+    <tspan x="530" dy="70">for cloud-hosted systems.</tspan>
+  </text>
+  <text x="530" y="392" fill="#42535d" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="28">
+    <tspan x="530" dy="0">Framework overview, publications, prototype materials,</tspan>
+    <tspan x="530" dy="38">and contact path for technical readers.</tspan>
+  </text>
+
+  <rect x="530" y="450" width="208" height="46" rx="23" fill="#ffffff" stroke="#d9cec0"/>
+  <text x="556" y="480" fill="#162129" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="21" font-weight="700">kakugri.github.io/gifts-site</text>
+
+  <text x="530" y="532" fill="#8d4627" font-family="'Gill Sans', 'Trebuchet MS', sans-serif" font-size="22" letter-spacing="3">KINGDOM MUTALA AKUGRI</text>
+</svg>

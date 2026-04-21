@@ -12,6 +12,7 @@ required_files=(
   "$site_dir/updates.html"
   "$site_dir/contact.html"
   "$site_dir/404.html"
+  "$site_dir/favicon.svg"
   "$site_dir/styles.css"
   "$site_dir/robots.txt"
   "$site_dir/sitemap.xml"
@@ -20,6 +21,7 @@ required_files=(
   "$site_dir/assets/MD.pdf"
   "$site_dir/assets/GIFTS.pdf"
   "$site_dir/assets/GIFTS.py"
+  "$site_dir/assets/gifts-social-card.svg"
 )
 
 for path in "${required_files[@]}"; do
