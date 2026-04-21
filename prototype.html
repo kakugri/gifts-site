@@ -8,13 +8,13 @@
     <meta name="theme-color" content="#f4efe6">
     <meta
       name="description"
-      content="Overview of the public, non-sensitive GIFTS prototype materials and the boundary between public artifacts and restricted operational detail."
+      content="Overview of the public GIFTS prototype materials, including the reference report, code entry point, and the scope of what is available for review."
     >
     <link rel="canonical" href="https://kakugri.github.io/gifts-site/prototype.html">
     <meta property="og:title" content="GIFTS Prototype | Non-sensitive Materials">
     <meta
       property="og:description"
-      content="Overview of the public, non-sensitive GIFTS prototype materials and the boundary between public artifacts and restricted operational detail."
+      content="Overview of the public GIFTS prototype materials, including the reference report, code entry point, and the scope of what is available for review."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kakugri.github.io/gifts-site/prototype.html">
@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="GIFTS Prototype | Non-sensitive Materials">
     <meta
       name="twitter:description"
-      content="Overview of the public, non-sensitive GIFTS prototype materials and the boundary between public artifacts and restricted operational detail."
+      content="Overview of the public GIFTS prototype materials, including the reference report, code entry point, and the scope of what is available for review."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -51,29 +51,29 @@
       <main>
         <div class="wrap">
           <section class="page-hero">
-            <span class="eyebrow">Prototype boundary</span>
-            <h1 style="max-width: 11ch;">Public artifacts that show the work is beyond the idea stage.</h1>
+            <span class="eyebrow">Prototype materials</span>
+            <h1 style="max-width: 11ch;">Public prototype materials for technical review.</h1>
             <p class="lead">
-              The public prototype materials are intended to show implementation maturity,
-              reproducibility-oriented structure, and technical seriousness without exposing
-              employer-confidential systems, proprietary internal workflows, or customer data.
+              This page collects the current public prototype materials for GIFTS. They are
+              intended to show implementation structure, reproducibility-minded design, and
+              technical maturity without disclosing restricted systems or data.
             </p>
           </section>
 
           <section class="section section-card">
-            <span class="label">What is public</span>
+            <span class="label">What is included</span>
             <div class="card-grid" style="margin-top: 0.4rem;">
               <article class="grid-card wide">
-                <h3>Included in the current public artifact boundary</h3>
+                <h3>Currently available</h3>
                 <ul class="stack-list">
-                  <li>non-sensitive prototype description and structure</li>
-                  <li>reference prototype code and configuration files</li>
-                  <li>technical report PDF generated from the runnable prototype</li>
-                  <li>reproducibility-oriented notes and dependency information</li>
+                  <li>prototype overview and implementation structure</li>
+                  <li>reference code entry point for direct technical inspection</li>
+                  <li>technical report PDF tied to the current prototype</li>
+                  <li>supporting materials that help readers inspect the work</li>
                 </ul>
               </article>
               <article class="grid-card wide">
-                <h3>Intentionally excluded from public release</h3>
+                <h3>Not included here</h3>
                 <ul class="stack-list">
                   <li>proprietary employer systems</li>
                   <li>restricted operational data</li>
@@ -85,13 +85,19 @@
           </section>
 
           <section class="section section-card">
-            <span class="label">Current links</span>
-            <h2>Local public-facing materials already available in this repository</h2>
+            <span class="label">How to review the prototype</span>
+            <h2>Start with the report, then inspect the code.</h2>
+            <p>
+              For most readers, the report PDF is the best starting point because it explains the
+              prototype structure and evaluation framing. The code entry point is there for a
+              closer technical inspection of the reference implementation.
+            </p>
             <div class="publication-grid" style="margin-top: 1rem;">
               <article class="prototype-card">
                 <h3>Prototype report PDF</h3>
                 <p>
-                  Generated reference-style artifact tied to the runnable research prototype.
+                  Best first stop for understanding the prototype structure, mechanics, and
+                  evaluation framing.
                 </p>
                 <div class="button-row">
                   <a class="button" href="assets/GIFTS.pdf">Open prototype PDF</a>
@@ -100,7 +106,8 @@
               <article class="prototype-card">
                 <h3>Prototype entry point</h3>
                 <p>
-                  Main runnable entry point for the current reference implementation.
+                  Best follow-up for readers who want to inspect the reference implementation
+                  directly.
                 </p>
                 <div class="button-row">
                   <a class="button" href="assets/GIFTS.py">Open prototype code</a>
@@ -111,12 +118,11 @@
 
           <section class="section band">
             <span class="label">Reproducibility note</span>
-            <h2>Public materials are reference artifacts, not production ITDR claims</h2>
+            <h2>These materials are reference artifacts, not enterprise deployment claims</h2>
             <p>
-              The current prototype is a reference implementation designed to demonstrate mechanics,
-              structure, and evaluation logic using non-sensitive materials. It should not be read
-              as a claim of enterprise-scale deployment performance from this public artifact set
-              alone.
+              The current prototype demonstrates mechanics, structure, and evaluation logic through
+              public materials. It should be read as a technical reference implementation rather
+              than as a claim of production deployment scale or performance.
             </p>
           </section>
 
@@ -124,10 +130,10 @@
             <span class="label">Inquiry path</span>
             <div class="cta-strip">
               <div>
-                <h2>Questions about reproducibility or scope can be directed through the contact page.</h2>
+                <h2>Questions about the prototype or reproducibility can be sent through the contact page.</h2>
                 <p class="fine-print">
-                  The preferred use of the contact page is to handle technical review questions,
-                  clarification requests, and non-sensitive collaboration or media inquiries.
+                  Use the contact page for technical questions, clarification requests, or
+                  collaboration inquiries related to the public materials.
                 </p>
               </div>
               <div class="button-row">
@@ -142,11 +148,11 @@
         <div class="wrap footer-inner">
           <div>
             <div class="small-caps">Prototype page</div>
-            <div>Focused on non-sensitive implementation maturity and public artifact boundaries.</div>
+            <div>Focused on implementation maturity and reviewable prototype materials.</div>
           </div>
           <div class="fine-print">
-            Future updates can add version notes, release milestones, and reproducibility details as
-            the public materials grow.
+            Future updates can add version notes, release milestones, and additional technical
+            documentation.
           </div>
         </div>
       </footer>
