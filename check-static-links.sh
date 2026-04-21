@@ -9,6 +9,7 @@ required_files=(
   "$site_dir/technology.html"
   "$site_dir/publications.html"
   "$site_dir/prototype.html"
+  "$site_dir/updates.html"
   "$site_dir/contact.html"
   "$site_dir/404.html"
   "$site_dir/styles.css"
