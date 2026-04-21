@@ -13,6 +13,7 @@ required_files=(
   "$site_dir/404.html"
   "$site_dir/styles.css"
   "$site_dir/robots.txt"
+  "$site_dir/sitemap.xml"
   "$site_dir/.nojekyll"
   "$site_dir/assets/WJARR-2026-0212.pdf"
   "$site_dir/assets/MD.pdf"
