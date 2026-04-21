@@ -320,13 +320,38 @@ h3 {
 }
 
 .page-hero {
-  padding: 2.25rem 2.3rem;
+  display: grid;
+  gap: 0.9rem;
+  align-items: start;
+  padding: clamp(1.85rem, 3.5vw, 2.55rem);
   border-radius: var(--radius-lg);
   margin-bottom: 1.75rem;
+  width: min(100%, 52rem);
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  right: 1.25rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 107, 112, 0.1) 0%, rgba(47, 107, 112, 0.03) 55%, transparent 72%);
+  pointer-events: none;
+}
+
+.page-hero h1 {
+  max-width: 18ch;
 }
 
 .page-hero p {
   margin-bottom: 0;
+}
+
+.page-hero .lead {
+  max-width: 56ch;
 }
 
 .section {
@@ -483,6 +508,10 @@ h3 {
   .section-card,
   .band {
     padding: 1.3rem;
+  }
+
+  .page-hero h1 {
+    max-width: none;
   }
 
   .metric-grid {
