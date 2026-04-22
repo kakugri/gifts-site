@@ -95,11 +95,12 @@
 
           <section class="section section-card">
             <span class="label">How to review the prototype</span>
-            <h2>Start with the report, then use the code as a reference.</h2>
+            <h2>Start with the report, then choose either code inspection or package download.</h2>
             <p>
               For most readers, the report PDF is the best starting point because it explains the
-              prototype structure and evaluation framing. The code entry point is there for a
-              closer technical inspection of the reference implementation.
+              prototype structure and evaluation framing. The public materials now support two
+              follow-up paths: quick code inspection and a fuller reference-package download for
+              local evaluation.
             </p>
             <div class="publication-grid" style="margin-top: 1rem;">
               <article class="prototype-card">
@@ -113,6 +114,18 @@
                 </div>
               </article>
               <article class="prototype-card">
+                <h3>Reference package download</h3>
+                <p>
+                  Best path for technically capable readers who want the runnable public reference
+                  package rather than a single entry-point file. The bundle includes input and
+                  output contracts, a CloudTrail-like adaptation example, and sample output
+                  artifacts from a small reference run.
+                </p>
+                <div class="button-row">
+                  <a class="button" href="assets/GIFTS-reference-package.zip">Download package</a>
+                </div>
+              </article>
+              <article class="prototype-card">
                 <h3>Prototype entry point</h3>
                 <p>
                   Best follow-up for readers who want to inspect the reference implementation
@@ -122,6 +135,99 @@
                   <a class="button" href="assets/GIFTS.py">Open reference code</a>
                 </div>
               </article>
+            </div>
+          </section>
+
+          <section class="section section-card">
+            <span class="label">Adoption posture</span>
+            <h2>The current public package is a reference implementation for review and adaptation.</h2>
+            <p>
+              GIFTS is currently best understood as a downloadable reference package for technical
+              evaluation. It shows model structure, synthetic evaluation flow, and forensic-report
+              output, together with public input and output contracts for adaptation and review,
+              but it should not yet be read as a claim of production-ready enterprise deployment.
+            </p>
+            <div class="card-grid" style="margin-top: 1rem;">
+              <article class="grid-card wide">
+                <h3>Usable today</h3>
+                <ul class="stack-list">
+                  <li>technical review and code inspection</li>
+                  <li>local execution of the public prototype pipeline</li>
+                  <li>evaluation of model flow and report outputs</li>
+                  <li>adaptation by technically capable collaborators</li>
+                </ul>
+              </article>
+              <article class="grid-card wide">
+                <h3>Still future-facing</h3>
+                <ul class="stack-list">
+                  <li>stable third-party ingestion adapters</li>
+                  <li>production deployment workflows</li>
+                  <li>operator-facing interfaces</li>
+                  <li>release-grade integration documentation</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section section-card">
+            <span class="label">End-to-end walkthrough</span>
+            <h2>Follow one public path from raw events to a suspicious-session readout.</h2>
+            <p>
+              This short walkthrough shows the current public adoption path in sequence: start from
+              CloudTrail-like raw records, convert them into the GIFTS session contract, then look
+              at the structured outputs from a small reference run.
+            </p>
+            <div class="card-grid" style="margin-top: 1rem;">
+              <article class="grid-card wide">
+                <h3>Step 1. Raw event input</h3>
+                <p>
+                  Begin with session-tagged CloudTrail-like records that preserve action name,
+                  source, principal identity, IP, region, user agent, and resource context.
+                </p>
+                <div class="button-row">
+                  <a class="button-alt" href="assets/cloudtrail_like_events.jsonl">Open raw input example</a>
+                </div>
+              </article>
+              <article class="grid-card wide">
+                <h3>Step 2. GIFTS session contract</h3>
+                <p>
+                  Convert those records into the stable sessionized GIFTS contract. That is the
+                  current public handoff between provider-specific logs and the reference package.
+                </p>
+                <div class="button-row">
+                  <a class="button-alt" href="assets/gifts_session_contract_example.jsonl">Open session-contract example</a>
+                </div>
+              </article>
+              <article class="grid-card wide">
+                <h3>Step 3. Structured run outputs</h3>
+                <p>
+                  A small reference run can emit both a human-readable forensic report and a
+                  machine-readable JSON summary for comparison and downstream review.
+                </p>
+                <div class="button-row">
+                  <a class="button-alt" href="assets/GIFTS_output_report_example.md">Open sample report</a>
+                  <a class="button-alt" href="assets/GIFTS_output_summary_example.json">Open sample JSON summary</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="section-card" style="margin-top: 1.2rem;">
+              <span class="label">How to read the suspicious session</span>
+              <p>
+                In the sample output, the suspicious session includes a blackout interval where
+                events are intentionally hidden. GIFTS then produces multiple candidate
+                reconstructions, a recommended consensus sequence, and per-slot uncertainty values.
+              </p>
+              <ul class="stack-list">
+                <li><strong>Observed actions</strong> show what the model was allowed to see.</li>
+                <li><strong>Consensus missing actions</strong> show the current recommended reconstruction.</li>
+                <li><strong>Uncertainty by index</strong> shows where competing hypotheses agree less strongly.</li>
+                <li><strong>Fast-path and deep-path metrics</strong> summarize how the small reference run behaved overall.</li>
+              </ul>
+              <p class="fine-print">
+                This is still prototype evaluation output, not a production forensic claim. The
+                goal is to make the current method reviewable, interpretable, and easier to adapt.
+              </p>
             </div>
           </section>
 
@@ -162,7 +268,7 @@
           </div>
           <div class="fine-print">
             Future updates can add version notes, release milestones, and additional technical
-            documentation. Last updated April 21, 2026.
+            documentation. Last updated April 22, 2026.
           </div>
         </div>
       </footer>

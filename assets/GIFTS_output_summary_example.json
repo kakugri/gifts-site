@@ -1,0 +1,254 @@
+{
+  "config": {
+    "batch_size": 128,
+    "diff_t": 6,
+    "effective_heal_start_t": 5,
+    "embedding_dim": 64,
+    "epochs_dec": 1,
+    "epochs_diff": 1,
+    "epochs_mlm": 1,
+    "latent_dim": 3,
+    "max_events": 10,
+    "requested_heal_start_t": 20,
+    "tokens_per_event": 9,
+    "trust_geo_w": 1.5,
+    "trust_heal_w": 0.5
+  },
+  "dataset": {
+    "action_vocab_size": 23,
+    "test_sessions": 5,
+    "train_sessions": 19,
+    "vocab_size": 69
+  },
+  "deep_path_metrics": {
+    "fn": 0,
+    "fp": 0,
+    "fpr_at_tpr95": 0.0,
+    "per_attack": {
+      "resource_hijack": {
+        "hit": 1,
+        "recall": 1.0,
+        "total": 1
+      }
+    },
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "threshold_tpr95": 2.30548694729805,
+    "tn": 4,
+    "tp": 1
+  },
+  "fast_path_metrics": {
+    "fn": 0,
+    "fp": 0,
+    "fpr_at_tpr95": 0.0,
+    "n_eval": 5,
+    "n_flagged": 1,
+    "per_attack": {
+      "resource_hijack": {
+        "hit": 1,
+        "recall": 1.0,
+        "total": 1
+      }
+    },
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "threshold_tpr95": 0.08583066271456041,
+    "tn": 4,
+    "tp": 1
+  },
+  "forensic_demo": {
+    "attack_type": "resource_hijack",
+    "blackout_interval": [
+      1,
+      3
+    ],
+    "consensus_actions": [
+      "cloudwatch:PutMetricData",
+      "ec2:RunInstances",
+      "s3:GetObject",
+      "athena:StartQueryExecution",
+      "iam:GetPolicy",
+      "s3:GetObject",
+      "cloudwatch:PutMetricData",
+      "cloudtrail:LookupEvents",
+      "ec2:RunInstances",
+      "athena:GetQueryResults"
+    ],
+    "consensus_missing_actions": [
+      "ec2:RunInstances",
+      "s3:GetObject"
+    ],
+    "ground_truth_full_actions": [
+      "sts:AssumeRole",
+      "ec2:DescribeInstances",
+      "ec2:RunInstances",
+      "ec2:CreateTags",
+      "cloudwatch:PutMetricData",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>"
+    ],
+    "ground_truth_missing_actions": [
+      "ec2:DescribeInstances",
+      "ec2:RunInstances"
+    ],
+    "hypotheses_generated": 7,
+    "hypothesis_summaries": [
+      {
+        "hypothesis_index": 1,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.1390715017914772,
+        "suspiciousness_score": 1.0
+      },
+      {
+        "hypothesis_index": 2,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.13144347071647644,
+        "suspiciousness_score": 1.0
+      },
+      {
+        "hypothesis_index": 3,
+        "missing_predictions": [
+          "iam:ListUsers",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.13824448361992836,
+        "suspiciousness_score": 0.0
+      },
+      {
+        "hypothesis_index": 4,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.14163627102971077,
+        "suspiciousness_score": 1.0
+      },
+      {
+        "hypothesis_index": 5,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.15595415979623795,
+        "suspiciousness_score": 1.0
+      },
+      {
+        "hypothesis_index": 6,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.14444787427783012,
+        "suspiciousness_score": 1.0
+      },
+      {
+        "hypothesis_index": 7,
+        "missing_predictions": [
+          "ec2:RunInstances",
+          "s3:GetObject"
+        ],
+        "plausibility_score": 0.15648235380649567,
+        "suspiciousness_score": 1.0
+      }
+    ],
+    "label": 1,
+    "missing_indices": [
+      1,
+      2
+    ],
+    "most_plausible_actions": [
+      "cloudwatch:PutMetricData",
+      "ec2:RunInstances",
+      "s3:GetObject",
+      "athena:StartQueryExecution",
+      "iam:GetPolicy",
+      "s3:GetObject",
+      "cloudwatch:PutMetricData",
+      "cloudtrail:LookupEvents",
+      "iam:GetRole",
+      "athena:GetQueryResults"
+    ],
+    "most_suspicious_actions": [
+      "cloudwatch:PutMetricData",
+      "ec2:RunInstances",
+      "s3:GetObject",
+      "athena:StartQueryExecution",
+      "iam:GetPolicy",
+      "s3:GetObject",
+      "cloudwatch:PutMetricData",
+      "cloudtrail:LookupEvents",
+      "ec2:RunInstances",
+      "athena:GetQueryResults"
+    ],
+    "observed_actions": [
+      "sts:AssumeRole",
+      "<BLACKOUT>",
+      "<BLACKOUT>",
+      "ec2:CreateTags",
+      "cloudwatch:PutMetricData",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>",
+      "<PAD>"
+    ],
+    "uncertainty_by_index": {
+      "1": 0.6100805695329037,
+      "2": 0.5572917705935012
+    },
+    "vote_table_by_index": {
+      "1": [
+        {
+          "action": "ec2:RunInstances",
+          "vote_score": 0.7909583449363708
+        },
+        {
+          "action": "iam:ListUsers",
+          "vote_score": 0.4681839197874069
+        },
+        {
+          "action": "cloudwatch:PutMetricData",
+          "vote_score": 0.3899993747472763
+        },
+        {
+          "action": "<PAD>",
+          "vote_score": 0.15832993388175964
+        },
+        {
+          "action": "athena:StartQueryExecution",
+          "vote_score": 0.07749353349208832
+        }
+      ],
+      "2": [
+        {
+          "action": "s3:GetObject",
+          "vote_score": 1.1112293004989624
+        },
+        {
+          "action": "iam:GetPolicy",
+          "vote_score": 0.725321426987648
+        },
+        {
+          "action": "athena:GetQueryResults",
+          "vote_score": 0.6735207512974739
+        }
+      ]
+    }
+  },
+  "package_role": "reference-implementation",
+  "runtime": {
+    "device": "cpu",
+    "report_path": "examples/GIFTS_output_report_example.md",
+    "summary_path": "examples/GIFTS_output_summary_example.json"
+  },
+  "schema_version": "gifts-output-summary-v1"
+}
