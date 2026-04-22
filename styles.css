@@ -174,16 +174,23 @@ main {
 .hero,
 .page-hero,
 .section-card,
-.band,
+.band {
+  position: relative;
+  background: rgba(255, 252, 247, 0.88);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 .grid-card,
 .timeline-card,
 .contact-card,
 .publication-card,
 .prototype-card {
   position: relative;
-  background: rgba(255, 252, 247, 0.88);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(250, 246, 240, 0.9));
+  border: 1px solid rgba(22, 33, 41, 0.09);
+  box-shadow: 0 12px 26px rgba(17, 34, 40, 0.08);
 }
 
 .hero {
@@ -379,14 +386,58 @@ h3 {
 
 .section-card,
 .band {
+  display: grid;
+  gap: 0.95rem;
   padding: 1.6rem;
   border-radius: var(--radius-lg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.section-card {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(250, 245, 237, 0.9)),
+    rgba(255, 252, 247, 0.88);
+}
+
+.section-card::before,
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(47, 107, 112, 0.3), rgba(177, 92, 57, 0.28), transparent 72%);
+  pointer-events: none;
 }
 
 .band {
   background:
     linear-gradient(135deg, rgba(177, 92, 57, 0.12), rgba(47, 107, 112, 0.08)),
     rgba(255, 252, 247, 0.82);
+}
+
+.section-card > *,
+.band > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-card > :is(h2, p, .fine-print),
+.band > :is(h2, p, .fine-print) {
+  margin: 0;
+}
+
+.section-card > h2,
+.band > h2 {
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.section-card > p,
+.band > p {
+  max-width: 62ch;
+  text-wrap: pretty;
 }
 
 .card-grid {
@@ -398,8 +449,50 @@ h3 {
 .prototype-card,
 .contact-card,
 .timeline-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   padding: 1.2rem;
   border-radius: var(--radius-md);
+}
+
+.grid-card::before,
+.publication-card::before,
+.prototype-card::before,
+.contact-card::before,
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(47, 107, 112, 0.62), rgba(177, 92, 57, 0.54), transparent 82%);
+  opacity: 0.8;
+}
+
+.grid-card > *,
+.publication-card > *,
+.prototype-card > *,
+.contact-card > *,
+.timeline-card > * {
+  margin: 0;
+}
+
+.grid-card p,
+.publication-card p,
+.prototype-card p,
+.contact-card p,
+.timeline-card p {
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.grid-card .button-row,
+.publication-card .button-row,
+.prototype-card .button-row,
+.contact-card .button-row,
+.timeline-card .button-row {
+  margin-top: auto;
+  padding-top: 0.2rem;
 }
 
 .grid-card {
@@ -412,10 +505,14 @@ h3 {
 
 .publication-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  margin-top: 1.3rem;
 }
 
 .contact-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  margin-top: 1.6rem;
 }
 
 .label {
@@ -453,14 +550,43 @@ h3 {
 }
 
 .timeline-card {
-  border-left: 4px solid rgba(177, 92, 57, 0.45);
+  border-left: 4px solid rgba(177, 92, 57, 0.38);
 }
 
 .cta-strip {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
-  align-items: center;
+  align-items: end;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 242, 233, 0.82));
+  border: 1px solid rgba(22, 33, 41, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+.cta-strip h2,
+.cta-strip p {
+  margin: 0;
+}
+
+.cta-strip h2 {
+  max-width: 18ch;
+}
+
+.cta-strip .button-row {
+  margin-top: 0;
+  justify-content: flex-end;
+}
+
+.section-card .section-card {
+  gap: 0.85rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(248, 242, 234, 0.88));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 10px 22px rgba(17, 34, 40, 0.06);
 }
 
 .fine-print {
@@ -522,6 +648,10 @@ h3 {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cta-strip .button-row {
+    justify-content: flex-start;
   }
 }
 
