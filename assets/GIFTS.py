@@ -1,10 +1,10 @@
-"""Entry point for GIFTS training/evaluation pipeline.
+"""Compatibility entry point for the GIFTS reference package.
 
-Refactored into modules under `code/gifts/`.
+Use this file together with the full downloadable package, not as a standalone script.
 """
 
-from gifts.pipeline import run_pipeline
+from gifts.cli import main
 
 
 if __name__ == "__main__":
-    run_pipeline(report_path="GIFTS_Forensic_Report_Inpaint.md")
+    raise SystemExit(main())

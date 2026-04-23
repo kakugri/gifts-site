@@ -172,11 +172,12 @@
 
           <section class="section section-card">
             <span class="label">End-to-end walkthrough</span>
-            <h2>Follow one public path from raw events to a suspicious-session readout.</h2>
+            <h2>Follow one public path from raw events to workflow findings.</h2>
             <p>
               This short walkthrough shows the current public adoption path in sequence: start from
-              CloudTrail-like raw records, convert them into the GIFTS session contract, then look
-              at the structured outputs from a small reference run.
+              CloudTrail-like raw records, convert them into the GIFTS session contract, score the
+              sessions into analyst findings, then inspect the structured outputs from a small
+              reference run.
             </p>
             <div class="card-grid" style="margin-top: 1rem;">
               <article class="grid-card wide">
@@ -200,7 +201,20 @@
                 </div>
               </article>
               <article class="grid-card wide">
-                <h3>Step 3. Structured run outputs</h3>
+                <h3>Step 3. Workflow findings</h3>
+                <p>
+                  Score validated sessions into JSONL, CSV, and markdown findings that can be used
+                  for SOC triage, identity-control review, incident reconstruction support, or
+                  red-team evaluation.
+                </p>
+                <div class="button-row">
+                  <a class="button-alt" href="assets/GIFTS_workflow_report_example.md">Open workflow report</a>
+                  <a class="button-alt" href="assets/GIFTS_workflow_findings_example.jsonl">Open findings JSONL</a>
+                  <a class="button-alt" href="assets/GIFTS_workflow_findings_example.csv">Open findings CSV</a>
+                </div>
+              </article>
+              <article class="grid-card wide">
+                <h3>Step 4. Structured model-run outputs</h3>
                 <p>
                   A small reference run can emit both a human-readable forensic report and a
                   machine-readable JSON summary for comparison and downstream review.
@@ -216,10 +230,13 @@
               <span class="label">How to read the suspicious session</span>
               <p>
                 In the sample output, the suspicious session includes a blackout interval where
-                events are intentionally hidden. GIFTS then produces multiple candidate
-                reconstructions, a recommended consensus sequence, and per-slot uncertainty values.
+                events are intentionally hidden. GIFTS now has two public review layers: a workflow
+                scoring layer that ranks the session for analyst review, and a prototype
+                reconstruction layer that can produce multiple candidate reconstructions, a
+                recommended consensus sequence, and per-slot uncertainty values.
               </p>
               <ul class="stack-list">
+                <li><strong>Workflow findings</strong> show which sessions should be reviewed first and why.</li>
                 <li><strong>Observed actions</strong> show what the model was allowed to see.</li>
                 <li><strong>Consensus missing actions</strong> show the current recommended reconstruction.</li>
                 <li><strong>Uncertainty by index</strong> shows where competing hypotheses agree less strongly.</li>
