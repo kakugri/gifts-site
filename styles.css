@@ -328,7 +328,8 @@ h3 {
 
 .page-hero {
   display: grid;
-  gap: 0.95rem;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  gap: 1.4rem;
   align-items: start;
   padding: clamp(1.85rem, 3.2vw, 2.55rem);
   border-radius: var(--radius-lg);
@@ -359,7 +360,7 @@ h3 {
 }
 
 .page-hero h1 {
-  max-width: 14ch;
+  max-width: 16ch;
   font-size: clamp(2.35rem, 4.2vw, 3.85rem);
   letter-spacing: -0.02em;
   text-wrap: balance;
@@ -370,8 +371,51 @@ h3 {
 }
 
 .page-hero .lead {
-  max-width: 54ch;
+  max-width: 58ch;
   text-wrap: pretty;
+}
+
+.page-hero-content,
+.page-hero-aside {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-content {
+  display: grid;
+  gap: 0.95rem;
+  align-content: start;
+}
+
+.page-hero-aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.hero-summary {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(248, 242, 234, 0.88));
+  border: 1px solid rgba(22, 33, 41, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 10px 22px rgba(17, 34, 40, 0.06);
+}
+
+.hero-summary > * {
+  margin: 0;
+}
+
+.hero-summary h3 {
+  font-size: 1.1rem;
+}
+
+.hero-summary p {
+  color: var(--ink-soft);
 }
 
 .section {
@@ -611,6 +655,7 @@ h3 {
 
 @media (max-width: 960px) {
   .hero,
+  .page-hero,
   .cta-strip,
   .publication-grid,
   .contact-grid {
